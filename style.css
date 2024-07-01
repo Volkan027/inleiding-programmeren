@@ -1,51 +1,63 @@
-body {
-    margin: 0;
-    padding: 0;
+#spel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image: url('images/battlebg.png'); /* https://displays.riotgames.com/en-gb/*/
 }
 
-p {
-    font-family:Arial, Helvetica, sans-serif;
-    padding-top: 1.5%;
-    text-align: center;
-    color: black;
+.afbeelding-en-knop-container {
+    display: flex;
+    flex-direction: column; /* Plaats de afbeelding en knop boven elkaar */
+    align-items: center; /* Center de inhoud horizontaal */
+    /* hulp van chatgpt*/
 }
 
-.gimma {
-    width: 100%;
-    height: 90vh;
-    border-bottom: 15px solid green;
-    margin: 0 auto;
-    position: relative;
-    background-image: url(background.gif);
+.afbeelding-en-knop-container img {
+    max-width: 500px;
 }
 
-.poppetje {
-    width: 200px;
-    position: absolute;
+#afbeelding1-container {
+    margin-right: auto; /* Duw de eerste container helemaal naar links */
+}
+
+#afbeelding2-container {
+    margin-left: auto; /* Duw de tweede container helemaal naar rechts */
+}
+
+#optie {
+    position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*hulp van chatgpt*/
 }
 
-.barrel {
+.health {
     position: absolute;
-    bottom: 0;
-    width: 80px;
-    animation: barrel-animation 1.5s infinite linear;
+    bottom: 230px; /* Positie Ietsje hoger*/
+    right: 150px; /* Positie meer naar links*/
+    display: flex; /* Zet de potions naast elkaar*/
 }
 
-@keyframes barrel-animation {
-    from {right: -80px;}
-    to {right: 100%;}
+.hp {
+    max-width: 50px; /* Past de maximale breedte aan */
+    margin-right: 5px; /* Voegt wat ruimte toe tussen potions*/
 }
 
-.jump {
-    animation: jump 500ms ease-out;
+#optie {
+    font-size: 70px;
 }
 
-@keyframes jump {
-    0% {bottom: 0;}
-    25% { bottom: 175px;}
-    50% {bottom: 175px;}
-    75% {bottom: 175px;}
-    100% {bottom: 0;}
+.projectile {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-image: url('images/vuurbal.png');
+    background-size: contain; 
+    background-repeat: no-repeat; 
 }
-/*https://github.com/codigoennuvem/mario-jumpfor2dsites/blob/main/js/script.js*/
+   /* hulp van chatgpt */
